@@ -31,3 +31,15 @@ class Solution:
             return val1
         else:
             return val2
+
+#testing
+sol = Solution()
+root = TreeNode(0)
+current_node = root
+n = 5
+for i in xrange(n):
+    current_node.left = TreeNode(i)
+    current_node = current_node.left
+print 'expected value was: ', n + 1
+print 'found value was: ', sol.maxDepth(root)
+    
