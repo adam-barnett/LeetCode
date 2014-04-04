@@ -50,16 +50,15 @@ class Solution:
         while fast.next is not None:
             if fast is slow:
                 return True
-            elif fast.next is None or fast.next.next is None:
+            elif fast.next.next is None:
                 return False
             else:
                 slow = slow.next
                 fast = fast.next.next
-        return False
 
 #test
 sol = Solution()
-is_linked = True
+is_linked = False
 size = 30
 nodes = range(30)
 linked = createLinked(nodes, True)
