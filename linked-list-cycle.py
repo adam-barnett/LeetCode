@@ -55,13 +55,14 @@ class Solution:
             else:
                 slow = slow.next
                 fast = fast.next.next
+        return False
 
 #test
 sol = Solution()
-is_linked = False
-size = 30
-nodes = range(30)
-linked = createLinked(nodes, True)
+is_linked = True
+size = 29
+nodes = range(size)
+linked = createLinked(nodes, is_linked)
 print 'the list is: ',
 printList(linked, size)
 print 'it is', is_linked, 'that this list is linked'
